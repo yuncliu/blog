@@ -8,3 +8,14 @@ tags: git
 ``` bash
 git reset .
 ```
+
+- Store http usname and password
+``` bash
+git config --global credential.helper cache
+git config --global credential.helper store
+```
+
+- set http proxy
+``` bash
+git config global http.proxy http://user:pwd@proxy_addr:port
+```
