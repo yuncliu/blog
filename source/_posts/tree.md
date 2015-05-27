@@ -5,7 +5,7 @@ tags: [C, Data Structure]
 
 Red-Black Tree is a popular data structure. But it is not in the libc.
 
-From the OpenBSD, there are a tree.h which define a SPLAY tree and a Red-Black Tree.
+From the OpenBSD, there is a tree.h which define a SPLAY tree and a Red-Black Tree.
 
 It don't need any other things.  It is use by many projects.
 
