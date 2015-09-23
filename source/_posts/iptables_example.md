@@ -1,6 +1,6 @@
 title: "iptables example"
 date: 2015-05-20 16:45:50
-tags: [network, linux]
+tags: [Network, Linux]
 ---
 
 - block output sctp packet
