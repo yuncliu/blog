@@ -3,17 +3,22 @@ date: 2015-09-23 16:01:38
 tags: [Network]
 ---
 
-## Handshake
+*Sequence* and *Acknowlegement* number is very import in TCP protocol. 
+They are used to detect if the packet is out of order or if there are any missing pakcets.
+The *Seq* in the *SYN* packet is called **ISN**(Initial Sequence Number)
 
-The Seq in the third packet is called ISN(Initial Sequence Number)
+Wireshark will calculate relative sequence nuber = real Seq - ISN
 
-Wireshark calculate relative sequence nuber = real Seq - Seq in first SYN packet.
 ```bash
 1.  36724 > 9999  [SYN] Seq=0 Win=43690 Len=0
+    36724 send a TCP header with SYN flag to 9999, ISN = 0. try to establish a TCP connection
 
 2.  9999  > 36724 [SYN, ACK] Seq=0 Ack=1 Win=43690 Len=0
+    9999 reply with SYN flag and Seq = ISN,  Ack = (ISN + 1)
 
 3.  36724 > 9999  [ACK] Seq=1 Ack=1 Win=43776 Len=0
+    36724 send with  Seq = ISN + 1, Ack = ISN + 1.  
+    TCP connection is estableshed 
 
 4.  36724 > 9999  [PSH, ACK] Seq=1 Ack=1 Win=43776 Len=3
     Seq = ISN  = 1
