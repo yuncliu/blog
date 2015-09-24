@@ -3,9 +3,9 @@ date: 2015-09-23 16:01:38
 tags: [Network]
 ---
 
-*Sequence* and *Acknowlegement* number is very import in TCP protocol. 
+**Sequence** and **Acknowlegement** number is very import in TCP protocol. 
 They are used to detect if the packet is out of order or if there are any missing pakcets.
-The *Seq* in the *SYN* packet is called **ISN**(Initial Sequence Number)
+The **Seq** in the **SYN** packet is called **ISN**(Initial Sequence Number)
 
 Wireshark will calculate relative sequence nuber = real Seq - ISN
 
@@ -44,3 +44,6 @@ Wireshark will calculate relative sequence nuber = real Seq - ISN
     So do you know here the Seq and Ack ?
     Seq is related with packet 6 and Ack is related with pakcet 8
 ```
+
+So, the **relative Seq** can reflect how many bytes is already sent, and **relative Ack** could reflect 
+how many bytes is already received.
