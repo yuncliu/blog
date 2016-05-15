@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.2.0"
   },
+  "scripts": {
+      "start":"hexo generate --watch & hexo server"
+  },
   "dependencies": {
     "hexo": "^3.1.0",
     "hexo-deployer-git": "^0.1.0",
